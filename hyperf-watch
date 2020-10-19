@@ -183,7 +183,7 @@ function serve(Process $serve)
 {
     $opt = getopt('c');
     # if (isset($opt['c'])) echo exec(PHP . ' ' . ENTRY_POINT_FILE . ' di:init-proxy') . '..' . PHP_EOL;
-    if (isset($opt['c'])) delDir('./runtime/container');
+    if (isset($opt['c'])) delDir(DIR.'/runtime/container');
     $serve->exec(PHP, START_COMMAND);
 }
 
