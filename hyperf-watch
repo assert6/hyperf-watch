@@ -176,6 +176,7 @@ function change()
     global $serve;
     echo CONSOLE_COLOR_YELLOW . "🔄 Restart @ " . date('Y-m-d H:i:s') . PHP_EOL;
     Process::kill($serve->pid);
+    Process::wait();
     start();
 }
 
